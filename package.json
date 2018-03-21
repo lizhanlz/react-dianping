@@ -1,0 +1,29 @@
+{
+  "name": "react-dianping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=dev webpack-dev-server --progress --colors"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.1.1",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {
+    "es6-promise": "^4.2.4",
+    "react": "^16.2.0",
+    "react-addons-perf": "^15.4.2",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "redux": "^3.7.2",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
