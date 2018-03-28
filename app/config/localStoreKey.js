@@ -1,0 +1,2 @@
+const CITYNAME = 'USER_CURRENT_CITY_NAME'
+export default CITYNAME
