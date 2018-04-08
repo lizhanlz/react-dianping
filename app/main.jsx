@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import Hello from './hello.jsx'
 import RouteMap from './router/routeMap.jsx'
 //import { render } from 'react-dom'
 import { Provider } from 'react-redux'
@@ -12,16 +11,6 @@ import './static/css/font-awesome.css'
 // import fn from './redux-demo.js'
 // fn()
 
-//
-// const render = (Hello) => {
-//   ReactDOM.render(
-//     <AppContainer>
-//       <Hello />
-//     </AppContainer>,
-//     document.getElementById('app')
-//   )
-// }
-// render(Hello)
 
 
 

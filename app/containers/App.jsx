@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
-import {Route, HashRouter, Switch} from 'react-router-dom'
+import {Route, Router, Switch} from 'react-router-dom'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import  Home  from '../containers/Home/index.jsx'
-import  List  from '../containers/List/index.jsx'
-import  Detail  from '../containers/Detail/index.jsx'
-import  NotFound  from '../containers/NotFound/index.jsx'
-import LocalStore from '../util/LocalStore.js'
+import  Home  from './Home/index.jsx'
+import  City  from './City/index.jsx'
+import  Login  from './Login/index.jsx'
+import  User  from './User/index.jsx'
+import  Search  from './Search/index.jsx'
+import  Detail  from './Detail/index.jsx'
+import  NotFound  from './NotFound/index.jsx'
+import LocalStore from '../util/localStore.js'
 import CITYNAME from '../config/localStoreKey.js'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import history from '../util/history.js'
 import * as userInforActionsFormOtherFile from '../actions/userinfo.js'
 
 class App extends React.Component {
@@ -21,18 +25,22 @@ class App extends React.Component {
     }
     render() {
         return (
-            <div>{
-                this.state.initDone
-                ? <Switch>
-                     <Route path="/" exact component={Home}/>
-                     <Route path='/list' component={List}/>
-                     <Route path="/detail/:userId" component={Detail}/>
-                     <Route path="*" component={NotFound}/>
-                 </Switch>
-                : <div>加载中...</div>
-            }
-
-            </div>
+            <Router history={history}>
+                <div>{
+                    this.state.initDone
+                    ? <Switch>
+                         <Route path="/" exact component={Home}/>
+                         <Route path='/city' component={City}/>
+                         <Route path='/Login/:router?' component={Login}/>
+                         <Route path='/User' component={User}/>
+                         <Route path='/search/:category/:keyword?' component={Search}/>
+                         <Route path="/detail/:id" component={Detail}/>
+                         <Route path="*" component={NotFound}/>
+                     </Switch>
+                    : <div>加载中...</div>
+                }
+                </div>
+            </Router>
         )
     }
     componentDidMount() {
