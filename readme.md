@@ -1,10 +1,11 @@
-#技术栈
+技术栈  
+----
 <https://github.com/lizhanlz/react-dianping>
 
 react + react-router + redux + less + ES6/7 + webpack + fetch
 
-#安装
-
+安装
+----
   
 	git clone https://github.com/lizhanlz/react-dianping  
   
@@ -12,15 +13,15 @@ react + react-router + redux + less + ES6/7 + webpack + fetch
   
 	npm instal
 
-#运行
-
+运行
+----
 	npm run mock (启动模拟后台服务器，提供api)
 	
 	npm run dev (启动前台程序)
 访问 http://localhost:8080
 
-#项目演示
-
+项目演示
+----
 请用chrome的手机模式预览  
 
 1.首页  
